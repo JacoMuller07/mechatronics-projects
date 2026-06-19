@@ -38,23 +38,21 @@ The resistor limits current to protect the LED. Without it, the LED burns out.
 
 ```cpp
 void setup() {
-  // Run once when Arduino powers on
   pinMode(13, OUTPUT);  // Set pin 13 as output
 }
 
 void loop() {
-  // Repeat forever
-  digitalWrite(13, HIGH);  // Turn LED ON (5V)
-  delay(1000);             // Wait 1000 milliseconds (1 second)
+  digitalWrite(13, HIGH);  // Turn LED ON
+  delay(1000);             // Wait 1 second
   
-  digitalWrite(13, LOW);   // Turn LED OFF (0V)
+  digitalWrite(13, LOW);   // Turn LED OFF
   delay(1000);             // Wait 1 second
 }
 ```
 
 ## How It Works
 
-1. **`pinMode(13, OUTPUT)`** - Tells Arduino that pin 13 will output power (not read input)
+1. **`pinMode(13, OUTPUT)`** - Tells Arduino that pin 13 will output power
 2. **`digitalWrite(13, HIGH)`** - Sends 5 volts to pin 13 → LED turns ON
 3. **`delay(1000)`** - Pauses for 1000 milliseconds (1 second)
 4. **`digitalWrite(13, LOW)`** - Sends 0 volts to pin 13 → LED turns OFF
